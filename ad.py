@@ -9,12 +9,13 @@ class EIF:
             self.normal_vector = normal_vector
             self.intercept = intercept
     # 初始化EIF
-    def __init__(self, n_estimators=200, sub_size=64, extension='full', contamination=0.1):
+    def __init__(self, n_estimators=300, sub_size=256, extension='full', contamination=0.1):
         self.height_limit = int(np.ceil(np.log2(sub_size)))
         self.n_estimators = n_estimators
         self.sub_size = sub_size
         self.extension = extension
         self.contamination = contamination
+        self.git = True
     def get_np(self, data):
         dim = data.shape[1]
         flag = False
